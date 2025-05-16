@@ -32,9 +32,7 @@ export const wagmiAdapter = new WagmiAdapter({
   storage: createStorage({ storage: cookieStorage }),
   ssr: true,
   networks,
-  projectId,
-  features: {
-    enableSocialLogin: false  // <--- Disables social logins
-  }
-})
+  projectId
+});
+
 export const config = wagmiAdapter.wagmiConfig;
