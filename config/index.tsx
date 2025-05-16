@@ -12,8 +12,17 @@ export const networks = [
       symbol: "MON",
       decimals: 18,
     },
-    rpcUrl: "https://monad-testnet.g.alchemy.com/v2/TlhjBg6q2GbrpJ71DGqu-erKGuJPuvT0",
-    blockExplorerUrl: "https://testnet.monadscan.com",
+    rpcUrls: {
+      default: {
+        http: ["https://monad-testnet.g.alchemy.com/v2/your-alchemy-api-key"]
+      }
+    },
+    blockExplorers: {
+      default: {
+        name: "MonadScan",
+        url: "https://testnet.monadscan.com"
+      }
+    }
   },
 ];
 
