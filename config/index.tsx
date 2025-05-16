@@ -29,12 +29,12 @@ export const networks = [
 if (!projectId) throw new Error("Project ID is not defined");
 
 export const wagmiAdapter = new WagmiAdapter({
-  storage: createStorage({
-    storage: cookieStorage,
-  }),
+  storage: createStorage({ storage: cookieStorage }),
   ssr: true,
   networks,
   projectId,
-});
-
+  features: {
+    enableSocialLogin: false  // <--- Disables social logins
+  }
+})
 export const config = wagmiAdapter.wagmiConfig;
